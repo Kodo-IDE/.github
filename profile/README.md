@@ -21,7 +21,7 @@ Kodo is built by [KerbalMissile](https://github.com/KerbalMissile) and [SS-YYC](
 
 Kodo is around **~70% lighter** than VSCode with no extensions installed. 
 
-Released under the [GPL-v3.0 license](LICENSE.md).
+Released under the [GPL-v3.0 license](https://github.com/Kodo-IDE/Kodo/blob/main/LICENSE).
 
 **[🌐 Website](https://kodo-ide.github.io/Kodo-Website/)  ·  [💬 Join The Discord](https://discord.gg/cUQ6C88Z9C)**
 
@@ -55,9 +55,9 @@ Releases are available through installers on the [Releases page](https://github.
 
 **Prerequisites (app):** Windows 10 (1809+) or Windows 11. Linux and macOS are currently not supported.
 
-Source users, please refer to [CONTRIBUTING.md](CONTRIBUTING.md) for required packages.
+Source users, please refer to [CONTRIBUTING.md](https://github.com/Kodo-IDE/Kodo/blob/main/CONTRIBUTING.md) for required packages.
 
-If you're running from source, feel free to clone the repository and modify code. Make sure all submissions comply with GPL v3.0 and the rules in the [CONTRIBUTING.md](CONTRIBUTING.md). Feedback, PRs and discussions are always and will always be welcome!
+If you're running from source, feel free to clone the repository and modify code. Make sure all submissions comply with GPL v3.0 and the rules in the [CONTRIBUTING.md](https://github.com/Kodo-IDE/Kodo/blob/main/CONTRIBUTING.md). Feedback, PRs and discussions are always and will always be welcome!
 
 ---
 
@@ -69,10 +69,10 @@ Contributions are welcome. The best ways to help:
 - **Pull Requests** - keep them focused; one change or fix per PR
 - **Extensions** - build a `.kox` and submit it to the marketplace
 
-See [CONTRIBUTING.md](CONTRIBUTING.md) for full details and rules, including how to build and submit extensions.
+See [CONTRIBUTING.md](https://github.com/Kodo-IDE/Kodo/blob/main/CONTRIBUTING.md) for full details and rules, including how to build and submit extensions.
 
 ---
 
 ## License
 
-© 2026 KerbalMissile and SS-YYC. Licensed under the [GPL-v3.0 license](LICENSE.md).
+© 2026 KerbalMissile and SS-YYC. Licensed under the [GPL-v3.0 license](https://github.com/Kodo-IDE/Kodo/blob/main/LICENSE).
