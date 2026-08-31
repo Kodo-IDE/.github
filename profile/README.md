@@ -23,7 +23,7 @@ Kodo is around **~70% lighter** than VSCode with no extensions installed.
 
 Released under the [GPL-v3.0 license](https://github.com/Kodo-IDE/Kodo/blob/main/LICENSE).
 
-**[🌐 Website](https://kodo-ide.github.io/Kodo-Website/)  ·  [💬 Join The Discord](https://discord.gg/cUQ6C88Z9C)**
+**[🌐 Website](https://kodo-ide.github.io/)  ·  [💬 Join The Discord](https://discord.gg/cUQ6C88Z9C)**
 
 ---
 
