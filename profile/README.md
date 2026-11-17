@@ -13,9 +13,9 @@
 <p align="center">
   <img src="https://img.shields.io/github/downloads/Kodo-IDE/Kodo/total?style=for-the-badge&label=Downloads&color=8C00FF" alt="Downloads" />
   <img src="https://img.shields.io/github/v/release/Kodo-IDE/Kodo?style=for-the-badge&label=Latest%20Release&color=8C00FF" alt="Latest Release" />
-  <img src="https://img.shields.io/github/commit-activity/t/Kodo-IDE/Kodo/dev?style=for-the-badge&label=Commits&color=8C00FF" alt="Commits on dev" />
-  <img src="https://img.shields.io/github/commit-activity/w/Kodo-IDE/Kodo/dev?style=for-the-badge&label=Weekly%20Commits&color=8C00FF" alt="Weekly Commit Activity on dev" />
-  <img src="https://img.shields.io/github/last-commit/Kodo-IDE/Kodo/dev?style=for-the-badge&label=Last%20Commit&color=8C00FF" alt="Last Commit on dev" />
+  <img src="https://img.shields.io/github/commit-activity/t/Kodo-IDE/Kodo/main?style=for-the-badge&label=Commits&color=8C00FF" alt="Commits on main" />
+  <img src="https://img.shields.io/github/commit-activity/w/Kodo-IDE/Kodo/main?style=for-the-badge&label=Weekly%20Commits&color=8C00FF" alt="Weekly Commit Activity on main" />
+  <img src="https://img.shields.io/github/last-commit/Kodo-IDE/Kodo/main?style=for-the-badge&label=Last%20Commit&color=8C00FF" alt="Last Commit on main" />
   <img src="https://img.shields.io/badge/Platform-Windows%20%7C%20Linux-8C00FF?style=for-the-badge" alt="Windows and Linux"/>
   <img src="https://img.shields.io/badge/License-GPL--3.0-8C00FF?style=for-the-badge" alt="GPL-3.0 License"/>
 </p>
@@ -24,7 +24,7 @@
 
 Kodo is built by [KerbalMissile](https://github.com/KerbalMissile) and [SS-YYC](https://github.com/SS-YYC) around a few simple ideas: your editor should stay out of your way. Quick setup, syntax highlighting via extensions, and zero friction from launch to coding. We want to make coding human again; no bloat, but still a good user experience.
 
-**Kodo v2.2.0** adds a command palette, side-by-side editing, native Git integration, and an editor minimap. It also brings faster startup, smoother large-file editing, and broad editor and language-server fixes.
+**Kodo v2.3.0** redesigns the UI around a shared token system, rebuilds the terminal around an always-visible, resizable sidebar, adds project-aware file icons, ships a much more capable engine for extensions, and introduces KodoIcons - our custom-drawn SVG icon set. Announcement banners can now appear right above the editor for real-time posts from Kodo devs.
 
 A fresh Kodo install is **15.4%** of VS Code's initial size (i.e. **84.6%** less disk). In ratio terms, a fresh install of VS Code is **6.48x** bigger. 
 
@@ -41,14 +41,17 @@ Released under the [GPL-v3.0 license](https://github.com/Kodo-IDE/Kodo/blob/main
 
 ---
 
-## What's New in v2.2.0
+## What's New in v2.3.0
 
-* **Command Palette** - Search and open files, run editor commands, navigate to lines and symbols, and invoke commands registered by plugins.
-* **Split Editor** - Work in two editor groups side by side, with pane-aware tabs and language-server documents.
-* **Native Git** - Use Git Source Control from Kodo and toggle it in Integrations Settings.
-* **Minimap and Navigation** - Scroll through the editor minimap, navigate between problems and code locations, and use per-pane breadcrumbs.
-* **Editor and Settings** - Refreshed Settings, integrated encoding, line-ending, and indentation choices, and more commands for common editor actions.
-* **Performance and Reliability** - Faster startup, less lag when closing folders, improved large-file handling, and fixes across editor rendering, split tabs, completions, and language-server startup.
+* **Smart File Icons** - project-aware Explorer icons: .NET, Rust, Go, Node, Python, CMake and other project markers get their own labels, as do Git files, licenses, READMEs, changelogs, lockfiles, and folder roles (source, tests, docs, CI, dependencies). Extensions can declare their own labels via `fileIcon` and `fileIcons`.
+* **Extensions, supercharged** - an expanded `ILangRulesProvider` with asynchronous analysis, cancellation, document and workspace context (up to 128 open documents), diagnostic codes, tags, related locations, and diagnostic-aware code actions. Analysis runs in Kodo's isolated Insight worker, and a conformance tool in Kodo-Extension-Template validates your provider before you publish.
+* **UI overhaul** - a unified token system across all of Kodo's surfaces and dialogs, micro-animations (toggleable in Accessibility Settings), a reworked editor toolbar with a Refresh Open Editors button, and settings reorganized into subsections you can find by Search.
+* **Terminal** - redesigned UI: tabs replaced by a sidebar, making the terminal host itself bigger; the sidebar is resizable, including auto-resize on double-click.
+* **The Editor** - the Explorer pane now splits vertically to show the File Explorer and Git Source Control at the same time; the Keyboard Shortcuts dialog is now part of Settings.
+* **Smart build/run** - compiler dialogs reworked to pick up exit codes and adjust the UI accordingly.
+* **Announcement Banners** - real-time banners from Kodo devs above the editor, with optional action buttons; critical banners stay until the announcement is removed.
+* **KodoIcons** - our custom-drawn, standalone SVG icon set now powers the app's UI.
+* **Removals** - the Encoding, Line Ending, and Tab Size dialogs are gone; those actions now live in the command palette.
 
 ---
 
@@ -61,7 +64,8 @@ Released under the [GPL-v3.0 license](https://github.com/Kodo-IDE/Kodo/blob/main
 | 🔨 **Build / Run**                  | Compile and run projects from within Kodo with custom commands                                          |
 | 🧑‍💻 **Integrated Terminal**       | Run code from within Kodo, no extra terminal needed                                                     |
 | 🎨 **Themes**                       | Built-in Dark, Light, and System Default modes + custom extension themes                                |
-| 📁 **Folder Support**               | Browse, auto-refresh, and resize the file explorer; rename inline                                       |
+| 🗂️ **Smart File Icons**          | Project markers, repo files, READMEs and folder roles get their own Explorer labels; extensions can declare theirs too |
+| 📁 **Folder Support**               | Browse, auto-refresh, and resize the file explorer; rename inline; split vertically with Git Source Control           |
 | 🔎 **Search**                       | Find in file, file-name search, and project-wide search (`Ctrl+Shift+F`)                                |
 | ⌘ **Command Palette**                | Open files, run commands, navigate to lines and symbols, and run plugin commands                        |
 | ↔ **Split Editor**                   | Edit two files side by side with independent editor groups                                                |
@@ -89,7 +93,7 @@ Released under the [GPL-v3.0 license](https://github.com/Kodo-IDE/Kodo/blob/main
 | Large Project Memory (2,501 files / 51 MB) | **~292 MB WS** | ~2.2 GB WS | ~87% less working-set memory |
 | Idle CPU | **1.9–2.1%** | 16.5% | ~8× lower measured CPU usage |
 
-These results were gathered from the same machine, opening the same projects during our benchmarks.
+These results were gathered from the same machine, opening the same project during our benchmarks.
 
 ---
 
